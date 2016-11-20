@@ -11,7 +11,7 @@ var bio = {
 	},
 	"welcomeMessage": "Hello World",
 	"skills": ["JavaScript", "JQuery", "HTML5/CSS3", "Bootstrap"],
-	"bioPic": "images/DSC_8391.jpg"
+	"bioPic": "https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/11390035_10200843507725846_6653585935267456665_n.jpg?oh=191873e99c3b5aec53703ff373b06a84&oe=58D09ADE"
 };
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
