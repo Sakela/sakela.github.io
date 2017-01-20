@@ -3,14 +3,14 @@ var bio = {
 	"name": "Igor Sakelari",
 	"role": "Web Developer",
 	"contacts": {
-		"mobile": "+38(093)137-4549",
+		"mobile": "+1(470)535-6421",
 		"email": "sakelari.igor@gmail.com",
-		"github": "sakela",
+		"github": "https://github.com/Sakela",
 		"twitter": "@sakela",
-		"location": "Odessa"
+		"location": "Acworth, GA, USA"
 	},
-	"welcomeMessage": "Hello World",
-	"skills": ["JavaScript", "JQuery", "HTML5/CSS3", "Bootstrap"],
+	"welcomeMessage": "This website is still under construction process",
+	"skills": ["JavaScript", "JQuery", "AngularJS", "HTML5/CSS3", "Bootstrap"],
 	"bioPic": "https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/11390035_10200843507725846_6653585935267456665_n.jpg?oh=191873e99c3b5aec53703ff373b06a84&oe=58D09ADE"
 };
 
@@ -27,7 +27,15 @@ var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
 
-if (bio.skills.length > 0){
+$("#header").append(HTMLskillsStart);
+
+for (var i=0;i<bio.skills.length;i++) {
+
+	var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
+    $("#skills").append(formattedSkills);
+}
+
+/*if (bio.skills.length > 0){
 	$("#header").append(HTMLskillsStart);
 	var formattedSkills = HTMLskills.replace("%data%", bio.skills[0]);
 	$("#skills").append(formattedSkills)
@@ -37,9 +45,9 @@ if (bio.skills.length > 0){
 	$("#skills").append(formattedSkills)
 	var formattedSkills = HTMLskills.replace("%data%", bio.skills[3]);
 	$("#skills").append(formattedSkills);
-}
+}*/
 
-$("#header").prepend(formattedWelcomeMsg).prepend(formattedPic).prepend(formattedRole).prepend(formattedName)
+$("#header").prepend(formattedWelcomeMsg).prepend(formattedPic).prepend(formattedRole).prepend(formattedName);
 
 $("#topContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedLocation);
 
@@ -66,7 +74,7 @@ var work = {
 			"description" : "Website Relevance Evaluation"
 		},
 		{
-			"employer" : "Angels",
+			"employer" : "Self Employed",
 			"title" : "Translator",
 			"location" : "Odessa Ukraine",
 			"dates" : "01-10-2010 to 01-12-2012",
@@ -98,20 +106,20 @@ var education = {
 		{
 			"name" : "Riverside Community College",
 			"location" : "Moreno Valley, CA",
-			"degree" : "Associate Degree",
-			"majors" : "Computer Science",
+			"degree" : "Unfinished",
+			"majors" : "General Education",
 			"dates" : "01.09.2010-01.06.2012"
 		},
 		{
 			"name" : "Northern Oklahoma College",
 			"location" : "Enid, OK",
-			"degree" : "Associate Degree",
-			"majors" : "Pharmacy",
+			"degree" : "Unfinished",
+			"majors" : "General education",
 			"dates" : "01.09.2012-01.06.2013"
 		}
 	],
 	"onlineCourses" : {
-		"title" : "Frontend Nano",
+		"title" : "Frontend NanoDegree",
 		"school" : "Udacity",
 		"date" : "01.12.2015-31.12.2015",
 		"url" : "https://www.udacity.com"
@@ -140,13 +148,13 @@ var projects = {
 			"title" : "Jumbotron",
 			"dates" : "01.05-2015-01.06.2015",
 			"description" : "Creating a website using bootstrap",
-			"images" : "https://yastatic.net/morda-logo/i/yandex_share-icon-comtr_200.png"
+			"images" : ""
 		},
 		{
 			"title" : "Udacity Resume",
 			"dates" : "01.11-2015-01.12.2015",
 			"description" : "Creating resume webpage using javascript",
-			"images" : "https://avatars.yandex.net/get-bunker/37f2097261801ba29affc49a77c4a9d827320db9/normal/37f209.png"
+			"images" : ""
 		}
 	],
 	"display" : function(){
