@@ -10,7 +10,7 @@ var bio = {
     },
     "welcomeMessage": "This website is still under construction process",
     "skills": ["JavaScript", "JQuery", "AngularJS", "HTML5/CSS3", "Bootstrap"],
-    "bioPic": "images/DSC_8391.jpg"
+    "bioPic": "https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/11390035_10200843507725846_6653585935267456665_n.jpg?oh=3dc628995ed402baa36cc1ecd22b03e0&oe=59965BDE"
 };
 
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -30,18 +30,6 @@ for (var i = 0; i < bio.skills.length; i++) {
     var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
     $("#skills").append(formattedSkills);
 }
-
-/*if (bio.skills.length > 0){
-	$("#header").append(HTMLskillsStart);
-	var formattedSkills = HTMLskills.replace("%data%", bio.skills[0]);
-	$("#skills").append(formattedSkills)
-	var formattedSkills = HTMLskills.replace("%data%", bio.skills[1]);
-	$("#skills").append(formattedSkills)
-	var formattedSkills = HTMLskills.replace("%data%", bio.skills[2]);
-	$("#skills").append(formattedSkills)
-	var formattedSkills = HTMLskills.replace("%data%", bio.skills[3]);
-	$("#skills").append(formattedSkills);
-}*/
 
 $("#header-top").prepend(formattedRole).prepend(formattedName);
 
