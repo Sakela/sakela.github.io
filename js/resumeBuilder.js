@@ -23,7 +23,7 @@ var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
 
-$("#header").append(HTMLskillsStart);
+$("#header-bottom").append(HTMLskillsStart);
 
 for (var i = 0; i < bio.skills.length; i++) {
 
@@ -43,7 +43,9 @@ for (var i = 0; i < bio.skills.length; i++) {
 	$("#skills").append(formattedSkills);
 }*/
 
-$("#header").prepend(formattedWelcomeMsg).prepend(formattedPic).prepend(formattedRole).prepend(formattedName);
+$("#header-top").prepend(formattedRole).prepend(formattedName);
+
+$("#header-bottom").prepend(formattedWelcomeMsg).prepend(formattedPic);
 
 $("#topContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedTwitter, formattedLocation);
 
@@ -57,7 +59,7 @@ function inName(name) {
     return name[0] + " " + name[1];
 }
 
-$("#name").prepend(internationalizeButton);
+//$("#name").prepend(internationalizeButton);
 
 
 var work = {
@@ -145,13 +147,25 @@ var projects = {
             "title": "Jumbotron",
             "dates": "01.05-2015-01.06.2015",
             "description": "Creating a website using bootstrap",
-            "images": ""
+            "images": "http://placehold.it/200x200"
         },
         {
             "title": "Udacity Resume",
             "dates": "01.11-2015-01.12.2015",
             "description": "Creating resume webpage using javascript",
-            "images": ""
+            "images": "http://placehold.it/200x200"
+        },
+        {
+            "title": "Udacity Resume",
+            "dates": "01.11-2015-01.12.2015",
+            "description": "Creating resume webpage using javascript",
+            "images": "http://placehold.it/200x200"
+        },
+        {
+            "title": "Udacity Resume",
+            "dates": "01.11-2015-01.12.2015",
+            "description": "Creating resume webpage using javascript",
+            "images": "http://placehold.it/200x200"
         }
     ],
     "display": function() {

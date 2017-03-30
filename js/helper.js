@@ -12,8 +12,8 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span class="white-text">%data%</span><hr/>';
+var HTMLheaderName = '<div class="col-xs-12 text-center"><h1 id="name">%data%</h1></div>';
+var HTMLheaderRole = '<span class="white-text col-xs-12 text-center">%data%</span><hr class="col-xs-12">';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
@@ -23,8 +23,8 @@ var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><
 var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
 var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic">';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+var HTMLbioPic = '<div class="col-xs-12"><img src="%data%" class="biopic img-circle img-responsive center-block"></div>';
+var HTMLwelcomeMsg = '<div class="col-xs-12 text-center white-text"<span class="welcome-message">%data%</span></div>';
 
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
@@ -36,11 +36,11 @@ var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
-var HTMLprojectStart = '<div class="project-entry"></div>';
+var HTMLprojectStart = '<div class="project-entry col-xs-6 text-center"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectImage = '<img class="img-responsive center-block" src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
@@ -108,9 +108,9 @@ function initializeMap() {
         disableDefaultUI: true
     };
 
-    /* 
+    /*
     For the map to be displayed, the googleMap var must be
-    appended to #mapDiv in resumeBuilder.js. 
+    appended to #mapDiv in resumeBuilder.js.
     */
     map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
