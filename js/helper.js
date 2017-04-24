@@ -12,16 +12,16 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<div class="col-xs-12 text-center"><h1 id="name">%data%</h1></div>';
-var HTMLheaderRole = '<span class="white-text col-xs-12 text-center">%data%</span><hr class="col-xs-12">';
+var HTMLheaderName = '<div class="col-xs-12 text-center head-and-role"><h1 id="name">%data%</h1></div>';
+var HTMLheaderRole = '<span class="white-text col-xs-12 text-center head-and-role">%data%</span><hr class="col-xs-12">';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+var HTMLcontactGeneric = '<li class="flex-item"><span class="blue-text">%contact%</span><span class="white-text">%data%</span></li>';
+var HTMLmobile = '<li class="flex-item"><span class="blue-text">mobile</span><span class="white-text">%data%</span></li>';
+var HTMLemail = '<li class="flex-item"><span class="blue-text">email</span><span class="white-text">%data%</span></li>';
+var HTMLtwitter = '<li class="flex-item"><span class="blue-text">twitter</span><span class="white-text">%data%</span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="blue-text">github</span><span class="white-text">%data%</span></li>';
+var HTMLblog = '<li class="flex-item"><span class="blue-text">blog</span><span class="white-text">%data%</span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="blue-text">location</span><span class="white-text">%data%</span></li>';
 
 var HTMLbioPic = '<div class="col-xs-12"><img src="%data%" class="biopic img-circle img-responsive center-block"></div>';
 var HTMLwelcomeMsg = '<div class="col-xs-12 text-center white-text"<span class="welcome-message">%data%</span></div>';
@@ -36,11 +36,11 @@ var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
-var HTMLprojectStart = '<div class="project-entry col-xs-6 text-center"></div>';
+var HTMLprojectStart = '<div class="project-entry col-xs-12 text-center"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img class="img-responsive center-block" src="%data%">';
+var HTMLprojectImage = '<img class="img-responsive center-block project-image" src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
@@ -84,7 +84,9 @@ function logClicks(x, y) {
 }
 
 $(document).click(function(loc) {
-    // your code goes here!
+    var x = loc.pageX;
+    var y = loc.pageY;
+    logClicks(x, y);
 });
 
 

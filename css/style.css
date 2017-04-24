@@ -11,7 +11,8 @@ h5,
 h6 {
     padding: 0;
     margin: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Droid Serif', serif;
+    font-weight: 400;
 }
 
 .clear-fix {
@@ -19,14 +20,22 @@ h6 {
 }
 
 .education-entry,
-.work-entry,
+.work-entry {
+    padding: 0 5%;
+}
+
 .project-entry {
     padding: 0 5%;
+    display: none;
+}
+
+.current {
+    display: block;
 }
 
 h1 {
     font-size: 40px;
-    color: #f5a623;
+    color: #aaa0f3;
     line-height: 48px;
     display: inline;
 }
@@ -34,7 +43,7 @@ h1 {
 h2 {
     font-weight: bold;
     font-size: 24px;
-    color: #999;
+    color: #aaa0f3;
     line-height: 29px;
     padding: 10px;
 }
@@ -87,26 +96,27 @@ a {
     text-decoration: none;
     margin-top: 10px;
     display: block;
+    font-weight: 700;
 }
 
 .welcome-message {
     font-style: italic;
     font-size: 18px;
-    color: #f3f3f3;
+    color: #aaa0f3;
     line-height: 28px;
 }
 
 #skills-h3 {
-    color: #f5ae23;
+    color: #aaa0f3;
     display: none;
 }
 
-.orange {
-    background-color: #f5ae23;
+.blue {
+    background-color: #aaa0f3;
 }
 
-.orange-text {
-    color: #f5ae23;
+.blue-text {
+    color: #aaa0f3;
 }
 
 .white-text {
@@ -125,9 +135,16 @@ a {
 }
 
 /* TODO: Replace with image later */
-#header-top,
+#header-top {
+    background: black;
+}
+
 #header-bottom {
-    background-color: #242424;
+    background: #4a4a4a; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(white 1%, #4a4a4a 15%, black 60%); /* Safari 5.1-6.0 */
+    background: -o-radial-gradient(white 1%, #4a4a4a 15%, black 60%); /* For Opera 11.6-12.0 */
+    background: -moz-radial-gradient(white 1%, #4a4a4a 15%, black 60%); /* For Firefox 3.6-15 */
+    background: radial-gradient(white 1%, #4a4a4a 15%, black 60%); /* Standard syntax */
 }
 
 .flex-box {
@@ -154,6 +171,11 @@ ul {
 
 img {
     padding: 10px;
+}
+
+.project-image {
+    max-height: 400px;
+    width: auto;
 }
 
 span {
