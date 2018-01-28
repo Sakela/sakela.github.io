@@ -8,9 +8,9 @@ var bio = {
         "github": "https://github.com/Sakela",
         "location": "Acworth, GA, USA"
     },
-    "welcomeMessage": "Carpe Diem",
-    "skills": ["JavaScript", "JQuery", "AngularJS", "HTML5/CSS3", "Bootstrap"],
-    "biopic": "https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/11390035_10200843507725846_6653585935267456665_n.jpg?oh=3dc628995ed402baa36cc1ecd22b03e0&oe=59965BDE",
+    "welcomeMessage": "Seeking a start in the career as Front-End Developer",
+    "skills": ["JavaScript", "JQuery", "AngularJS", "KnockoutJS", "HTML5/CSS3", "Bootstrap"],
+    "biopic": "images/DSC_8391.JPG",
     "display": function() {
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -52,35 +52,37 @@ function inName(name) {
 /*****Education Section*****/
 
 var education = {
-    "schools": [{
-            "name": "Riverside Community College",
-            "location": "Moreno Valley, CA",
-            "degree": "N/A",
-            "majors": ["CS"],
-            "dates": "01.09.2010-01.06.2012",
-            "url": "http://www.rcc.edu"
-        },
+    "schools": [
         {
             "name": "Northern Oklahoma College",
-            "location": "Enid, OK",
-            "degree": "N/A",
-            "majors": ["CS"],
+            "location": "Enid, OK, United States",
+            "degree": "",
+            "majors": ["General classes"],
             "dates": "01.09.2012-01.06.2013",
             "url": "http://www.noc.edu"
-        }
+        },
+        {
+            "name": "Riverside Community College",
+            "location": "Moreno Valley, CA, United States",
+            "degree": "",
+            "majors": ["General classes"],
+            "dates": "01.09.2010-01.06.2012",
+            "url": "http://www.rcc.edu"
+        }        
     ],
-    "onlineCourses": [{
+    "onlineCourses": [
+        {
+            "title": "Front-End NanoDegree",
+            "school": "Udacity",
+            "dates": "01.20.2017-12.30.2017",
+            "url": "https://www.udacity.com"
+        },
+        {
             "title": "Web Development Courses",
             "school": "CodeCademy",
             "dates": "2016",
             "url": "https://www.codecademy.com"
-        },
-        {
-            "title": "Front-End NanoDegree",
-            "school": "Udacity",
-            "dates": "20.01.2017-Present",
-            "url": "https://www.udacity.com"
-        }
+        }        
     ],
     "display": function() {
         $("#education").append(HTMLschoolStart);
@@ -92,7 +94,7 @@ var education = {
             var formattedSchoolDates = HTMLschoolDates.replace("%data%", school.dates);
             var formattedSchoolNameDegree = formattedSchoolName + formattedSchoolDegree;
 
-            $(".education-entry:last").append(formattedSchoolNameDegree, formattedSchoolLocation, formattedSchoolDates);
+            $(".education-entry:last").append(formattedSchoolName, formattedSchoolLocation, formattedSchoolDates);
 
             for (var i = 0; i < school.majors.length; i++) {
                 var formattedSchoolMajors = HTMLschoolMajor.replace("%data%", school.majors[i]);
@@ -122,19 +124,20 @@ var education = {
 /*****Work Section*****/
 
 var work = {
-    "jobs": [{
-            "employer": "Yandex Ukraine",
-            "title": "Assessor",
-            "location": "Odessa Ukraine",
-            "dates": "01-10-2012 to 01-12-2016",
-            "description": "Website Relevance Evaluation"
+    "jobs": [
+        {
+            "employer": "KeHE Distributors",
+            "title": "Inventory Control Specialist",
+            "location": "Douglasville, GA, United States",
+            "dates": "01-12-2016 to Current",
+            "description": "Inventory slotting, maintain data accuracy with Excel, investigate discrepancies"
         },
         {
-            "employer": "Self Employed",
-            "title": "Director",
+            "employer": "Yandex Ukraine",
+            "title": "Website Assessor",
             "location": "Odessa Ukraine",
-            "dates": "01-10-2010 to 01-12-2012",
-            "description": "Guide And Translation Services"
+            "dates": "01-10-2012 to 01-12-2016",
+            "description": "Website relevance evaluation, spam detection, side-by-side search engine comparison"
         }
     ],
     "display": function() {
@@ -156,7 +159,15 @@ var work = {
 /*****Projects Section*****/
 
 var projects = {
-    "projects": [{
+    "projects": [
+        {
+            "title": "Neighborhood Map",
+            "dates": "November 2017- December 2017",
+            "description": "Single page app with KnockoutJS MVVM pattern, utilizing use of 3rd party APIs",
+            "images": "images/neighborhood.jpg",
+            "url" : "https://sakela.github.io/neighborhood-map"
+        },
+        {
             "title": "Jumbotron",
             "dates": "01.05-2015-01.06.2015",
             "description": "Creating a website using bootstrap library",
@@ -171,13 +182,13 @@ var projects = {
         {
             "title": "Angular Phonecat",
             "dates": "05.08-2016-15.08.2016",
-            "description": "Catalogue with angular framework",
+            "description": "Catalogue with Angular framework",
             "images": "images/phonecat.jpg"
         },
         {
             "title": "App Market with Angular",
             "dates": "07.09-2016-10.09.2016",
-            "description": "Practicing Angular with CodeAcademy",
+            "description": "Practicing AngularJS with Codecademy",
             "images": "images/angularApp.jpg"
         }
     ],
@@ -192,6 +203,12 @@ var projects = {
             $(".project-entry:last").append(formattedDescription);
             var formattedImage = HTMLprojectImage.replace("%data%", app.images);
             $(".project-entry:last").append(formattedImage);
+
+            $(".project-entry a:last").each(function(i) {
+                var $this = $(this);
+                $this.attr("target", "_blank");
+                $this.attr("href", app.url);
+            });
         });
     }
 };

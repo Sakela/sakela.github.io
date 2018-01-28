@@ -161,6 +161,7 @@ function initializeMap() {
         var marker = new google.maps.Marker({
             map: map,
             position: placeData.geometry.location,
+            animation: google.maps.Animation.DROP,
             title: name
         });
 
