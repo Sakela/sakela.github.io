@@ -8,8 +8,8 @@ var bio = {
         "github": "https://github.com/Sakela",
         "location": "Acworth, GA, USA"
     },
-    "welcomeMessage": "Seeking a start in the career as Front-End Developer",
-    "skills": ["JavaScript", "JQuery", "AngularJS", "KnockoutJS", "HTML5/CSS3", "Bootstrap"],
+    "welcomeMessage": "Seeking to start a career as Front-End Developer",
+    "skills": ["JavaScript", "JQuery", "AngularJS", "KnockoutJS", "HTML5/CSS3", "Bootstrap", "TDD", "REST"],
     "biopic": "images/DSC_8391.JPG",
     "display": function() {
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -129,14 +129,14 @@ var work = {
             "employer": "KeHE Distributors",
             "title": "Inventory Control Specialist",
             "location": "Douglasville, GA, United States",
-            "dates": "01-12-2016 to Current",
+            "dates": "12-01-2016 to Current",
             "description": "Inventory slotting, maintain data accuracy with Excel, investigate discrepancies"
         },
         {
             "employer": "Yandex Ukraine",
             "title": "Website Assessor",
             "location": "Odessa Ukraine",
-            "dates": "01-10-2012 to 01-12-2016",
+            "dates": "10-01-2012 to 12-01-2016",
             "description": "Website relevance evaluation, spam detection, side-by-side search engine comparison"
         }
     ],
@@ -161,23 +161,39 @@ var work = {
 var projects = {
     "projects": [
         {
+            "title": "Feedreader Testing",
+            "dates": "December 2017",
+            "description": "Writing unit tests with Jasmine",
+            "images": "images/testing.jpg",
+            "url" : "https://sakela.github.io/feedreader-testing"
+        },
+        {
             "title": "Neighborhood Map",
-            "dates": "November 2017- December 2017",
-            "description": "Single page app with KnockoutJS MVVM pattern, utilizing use of 3rd party APIs",
+            "dates": "October 2017 - December 2017",
+            "description": "Single page app with KnockoutJS MVVM pattern, utilizing use of 3rd party API libraries",
             "images": "images/neighborhood.jpg",
             "url" : "https://sakela.github.io/neighborhood-map"
         },
         {
-            "title": "Jumbotron",
-            "dates": "01.05-2015-01.06.2015",
-            "description": "Creating a website using bootstrap library",
-            "images": "images/flipboard.jpg"
+            "title": "Optimization Portfolio",
+            "dates": "August 2017 - September 2017",
+            "description": "Use optimization techniques to make pizza page run without jaddering",
+            "images": "images/optimization.jpg",
+            "url" : "https://sakela.github.io/optimization-portfolio/views/pizza.html"
+        },
+        {
+            "title": "Frogger Arcade Game Clone",
+            "dates": "June 2017 - July 2017",
+            "description": "A game created on HTML5 Canvas with JavaScript OOP paradigm",
+            "images": "images/arcade.jpg",
+            "url" : "https://sakela.github.io/frogger-arcade"
         },
         {
             "title": "Udacity Portfolio",
-            "dates": "07.03-2017-26.03.2017",
+            "dates": "March 2017",
             "description": "Udacity course for responsive design and images",
-            "images": "images/portfolio.jpg"
+            "images": "images/portfolio.jpg",
+            "url" : "https://sakela.github.io/my-portfolio"
         },
         {
             "title": "Angular Phonecat",
@@ -189,8 +205,16 @@ var projects = {
             "title": "App Market with Angular",
             "dates": "07.09-2016-10.09.2016",
             "description": "Practicing AngularJS with Codecademy",
-            "images": "images/angularApp.jpg"
-        }
+            "images": "images/angularApp.jpg",
+            "url" : "https://sakela.github.io/angular-direct"
+        },
+        {
+            "title": "Jumbotron Flipboard",
+            "dates": "May 2015 - June 2015",
+            "description": "Creating a simple web page using Bootstrap library",
+            "images": "images/flipboard.jpg",
+            "url" : "https://sakela.github.io/MyFlipboard"
+        }        
     ],
     "display": function() {
         projects.projects.forEach(function(app) {
@@ -228,7 +252,7 @@ $(document).ready(function() {
                     var nextProj = currentProj.next().length ? currentProj.next() : set.children().eq(1);
                     nextProj.fadeIn(600).addClass('current');
                 });
-            }, 5000);
+            }, 6000);
         })($(this));
     });
 });
