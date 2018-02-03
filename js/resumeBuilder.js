@@ -58,7 +58,7 @@ var education = {
             "location": "Enid, OK, United States",
             "degree": "",
             "majors": ["General classes"],
-            "dates": "September 2012 - June 2013",
+            "dates": "September 2008 - June 2009",
             "url": "http://www.noc.edu"
         },
         {
@@ -66,7 +66,7 @@ var education = {
             "location": "Moreno Valley, CA, United States",
             "degree": "",
             "majors": ["General classes"],
-            "dates": "September 2010 - June 2012",
+            "dates": "September 2007 - June 2008",
             "url": "http://www.rcc.edu"
         }        
     ],
