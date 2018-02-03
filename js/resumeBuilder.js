@@ -58,7 +58,7 @@ var education = {
             "location": "Enid, OK, United States",
             "degree": "",
             "majors": ["General classes"],
-            "dates": "01.09.2012-01.06.2013",
+            "dates": "September 2012 - June 2013",
             "url": "http://www.noc.edu"
         },
         {
@@ -66,7 +66,7 @@ var education = {
             "location": "Moreno Valley, CA, United States",
             "degree": "",
             "majors": ["General classes"],
-            "dates": "01.09.2010-01.06.2012",
+            "dates": "September 2010 - June 2012",
             "url": "http://www.rcc.edu"
         }        
     ],
@@ -74,7 +74,7 @@ var education = {
         {
             "title": "Front-End NanoDegree",
             "school": "Udacity",
-            "dates": "01.20.2017-12.30.2017",
+            "dates": "January 2017- December 2017",
             "url": "https://www.udacity.com"
         },
         {
@@ -129,14 +129,14 @@ var work = {
             "employer": "KeHE Distributors",
             "title": "Inventory Control Specialist",
             "location": "Douglasville, GA, United States",
-            "dates": "12-01-2016 to Current",
+            "dates": "December 2016 - Current",
             "description": "Inventory slotting, maintain data accuracy with Excel, investigate discrepancies"
         },
         {
             "employer": "Yandex Ukraine",
             "title": "Website Assessor",
             "location": "Odessa Ukraine",
-            "dates": "10-01-2012 to 12-01-2016",
+            "dates": "September 2013 - December 2016",
             "description": "Website relevance evaluation, spam detection, side-by-side search engine comparison"
         }
     ],
@@ -197,20 +197,20 @@ var projects = {
         },
         {
             "title": "Angular Phonecat",
-            "dates": "05.08-2016-15.08.2016",
+            "dates": "August 2016",
             "description": "Catalogue with Angular framework",
             "images": "images/phonecat.jpg"
         },
         {
             "title": "App Market with Angular",
-            "dates": "07.09-2016-10.09.2016",
+            "dates": "July 2016",
             "description": "Practicing AngularJS with Codecademy",
             "images": "images/angularApp.jpg",
             "url" : "https://sakela.github.io/angular-direct"
         },
         {
             "title": "Jumbotron Flipboard",
-            "dates": "May 2015 - June 2015",
+            "dates": "June 2016",
             "description": "Creating a simple web page using Bootstrap library",
             "images": "images/flipboard.jpg",
             "url" : "https://sakela.github.io/MyFlipboard"
