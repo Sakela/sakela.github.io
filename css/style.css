@@ -79,10 +79,11 @@ h5 {
     font-size: 14px;
     color: #999;
     line-height: 16px;
-    float: left;
+    /* float: left; */
 }
 
 .location-text {
+    display: block;
     font-style: italic;
     font-size: 14px;
     color: #999;
@@ -231,12 +232,20 @@ button {
     #lets-connect {
         margin-top: 5%;
     };
+
+    .location-text {
+      display: block;
+    }
 }
 
 @media only screen and (max-width:900px) {
     .biopic {
         width: 175px;
     };
+
+    .location-text {
+      display: block;
+    }
 }
 
 @media only screen and (max-width: 750px) {
@@ -254,7 +263,7 @@ button {
     }
 
     .welcome-message {
-        display: none;
+        display: block;
     };
 
     #map {
@@ -267,6 +276,10 @@ button {
         height: 250px;
         width: 100%;
         padding-bottom: 10%;
+    }
+
+    .location-text {
+      display: none;
     }
 }
 

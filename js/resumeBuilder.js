@@ -8,9 +8,9 @@ var bio = {
         "github": "https://github.com/Sakela",
         "location": "Acworth, GA, USA"
     },
-    "welcomeMessage": "Seeking to start a career as Front-End Developer",
-    "skills": ["JavaScript", "JQuery", "AngularJS", "KnockoutJS", "HTML5/CSS3", "Bootstrap", "TDD", "REST"],
-    "biopic": "images/DSC_8391.JPG",
+    // "welcomeMessage": "Seeking to start a career as Front-End Developer",
+    "skills": ["JavaScript", "JQuery", "AngularJS", "KnockoutJS", "HTML5/CSS3", "Bootstrap", "Jasmine", "REST", "AJAX"],
+    "biopic": "images/ava.jpg",
     "display": function() {
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -18,7 +18,7 @@ var bio = {
         var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
         var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
         var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-        var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+        // var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
         var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
 
         $("#header-bottom").append(HTMLskillsStart);
@@ -30,7 +30,7 @@ var bio = {
 
         $("#header-top").prepend(formattedRole).prepend(formattedName);
 
-        $("#header-bottom").prepend(formattedWelcomeMsg).prepend(formattedPic);
+        $("#header-bottom").prepend(formattedPic);
 
         $("#topContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedLocation);
     }
@@ -68,7 +68,7 @@ var education = {
             "majors": ["General classes"],
             "dates": "September 2007 - June 2008",
             "url": "http://www.rcc.edu"
-        }        
+        }
     ],
     "onlineCourses": [
         {
@@ -82,12 +82,13 @@ var education = {
             "school": "CodeCademy",
             "dates": "2016",
             "url": "https://www.codecademy.com"
-        }        
+        }
     ],
     "display": function() {
-        $("#education").append(HTMLschoolStart);
+
 
         education.schools.forEach(function(school) {
+          $("#education").append(HTMLschoolStart);
             var formattedSchoolName = HTMLschoolName.replace("%data%", school.name);
             var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", school.location);
             var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
@@ -96,10 +97,10 @@ var education = {
 
             $(".education-entry:last").append(formattedSchoolName, formattedSchoolLocation, formattedSchoolDates);
 
-            for (var i = 0; i < school.majors.length; i++) {
-                var formattedSchoolMajors = HTMLschoolMajor.replace("%data%", school.majors[i]);
-                $(".education-entry:last").append(formattedSchoolMajors);
-            }
+            // for (var i = 0; i < school.majors.length; i++) {
+            //     var formattedSchoolMajors = HTMLschoolMajor.replace("%data%", school.majors[i]);
+            //     $(".education-entry:last").append(formattedSchoolMajors);
+            // }
 
             $(".education-entry a:last").each(function(i) {
                 var $this = $(this);
@@ -107,10 +108,11 @@ var education = {
             });
         });
 
-        $(".education-entry").append(HTMLonlineClasses);
-        $(".education-entry h3").before("<hr>");
+        // $(".education-entry").append(HTMLonlineClasses);
+        $(".education-entry:last").after("<hr>");
 
         education.onlineCourses.forEach(function(course) {
+            $("#education").append(HTMLschoolStart);
             var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", course.title);
             var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", course.school);
             var formattedOnlineTitleSchool = formattedOnlineTitle + formattedOnlineSchool;
@@ -160,6 +162,13 @@ var work = {
 
 var projects = {
     "projects": [
+        {
+            "title": "Art Studio with Angular",
+            "dates": "February 2018 - March 2018",
+            "description": "SPA application featuring AngularJS modular architecture",
+            "images": "images/art-angular.jpg",
+            "url" : "https://sakela.github.io/AnnaStudio"
+        },
         {
             "title": "Feedreader Testing",
             "dates": "December 2017",
@@ -214,7 +223,7 @@ var projects = {
             "description": "Creating a simple web page using Bootstrap library",
             "images": "images/flipboard.jpg",
             "url" : "https://sakela.github.io/MyFlipboard"
-        }        
+        }
     ],
     "display": function() {
         projects.projects.forEach(function(app) {
