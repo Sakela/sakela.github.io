@@ -226,6 +226,12 @@ var projects = {
         }
     ],
     "display": function() {
+        var HTMLprojectStart = '<div class="project-entry col-xs-12 text-center"></div>';
+        var HTMLprojectTitle = '<a href="#" id="title">%data%</a>';
+        var HTMLprojectDates = '<div class="date-text">%data%</div>';
+        var HTMLprojectDescription = '<p id="description"><br>%data%</p>';
+        var HTMLprojectImage = '<img class="img-responsive center-block project-image" src="%data%">';
+
         projects.projects.forEach(function(app) {
             $("#projects").append(HTMLprojectStart);
             var formattedTitle = HTMLprojectTitle.replace("%data%", app.title);
@@ -266,7 +272,36 @@ $(document).ready(function() {
     });
 });
 
-// $("#mapDiv").append(googleMap);
+/*
+The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
+*/
+clickLocations = [];
+
+function logClicks(x, y) {
+    clickLocations.push({
+        x: x,
+        y: y
+    });
+    console.log('x location: ' + x + '; y location: ' + y);
+}
+
+$(document).click(function(loc) {
+    var x = loc.pageX;
+    var y = loc.pageY;
+    logClicks(x, y);
+});
+
+var internationalizeButton = '<button>Internationalize</button>';
+
+/*
+The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
+*/
+$(document).ready(function() {
+    $('button').click(function() {
+        var iName = inName(bio.name) || function() {};
+        $('#name').html(iName);
+    });
+});
 
 //Call display functions for each section
 
