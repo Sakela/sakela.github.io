@@ -11,9 +11,9 @@ var bio = {
     // "welcomeMessage": "Seeking to start a career as Front-End Developer",
     "skills": ["JavaScript", "JQuery", "AngularJS", "KnockoutJS", "HTML5/CSS3", "Bootstrap", "Jasmine", "REST", "AJAX"],
     "biopic": "images/ava.jpg",
-    "display": function() {
-        var formattedName = HTMLheaderName.replace("%data%", bio.name);
-        var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+    // "display": function() {
+        var formattedName = $('#name').text(bio.name);
+        var formattedRole = $('#name').next().text(bio.role);
         var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
         var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
         var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
