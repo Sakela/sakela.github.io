@@ -29,12 +29,12 @@ replace the %data% placeholder text you see in them.
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
+// var HTMLworkStart = '<div class="work-entry"></div>';
+// var HTMLworkEmployer = '<a href="#">%data%';
+// var HTMLworkTitle = ' - %data%</a>';
+// var HTMLworkDates = '<div class="date-text">%data%</div>';
+// var HTMLworkLocation = '<div class="location-text">%data%</div>';
+// var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry col-xs-12 text-center"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';

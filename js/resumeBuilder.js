@@ -11,28 +11,28 @@ var bio = {
     // "welcomeMessage": "Seeking to start a career as Front-End Developer",
     "skills": ["JavaScript", "JQuery", "AngularJS", "KnockoutJS", "HTML5/CSS3", "Bootstrap", "Jasmine", "REST", "AJAX"],
     "biopic": "images/ava.jpg",
-    // "display": function() {
-        var formattedName = $('#name').text(bio.name);
-        var formattedRole = $('#name').next().text(bio.role);
-        var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-        var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-        var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-        var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-        // var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-        var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
-
-        $("#header-bottom").append(HTMLskillsStart);
-
-        for (var i = 0; i < bio.skills.length; i++) {
-            var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
-            $("#skills").append(formattedSkills);
-        }
-
-        $("#header-top").prepend(formattedRole).prepend(formattedName);
-
-        $("#header-bottom").prepend(formattedPic);
-
-        $("#topContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedLocation);
+    "display": function() {
+        // var formattedName = $('#name').text(bio.name);
+        // var formattedRole = $('#name').next().text(bio.role);
+        // var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+        // var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+        // var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+        // var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+        // // var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+        // var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
+        //
+        // $("#header-bottom").append(HTMLskillsStart);
+        //
+        // for (var i = 0; i < bio.skills.length; i++) {
+        //     var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
+        //     $("#skills").append(formattedSkills);
+        // }
+        //
+        // $("#header-top").prepend(formattedRole).prepend(formattedName);
+        //
+        // $("#header-bottom").prepend(formattedPic);
+        //
+        // $("#topContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedLocation);
     }
 };
 
@@ -144,16 +144,16 @@ var work = {
     ],
     "display": function() {
         work.jobs.forEach(function(job) {
-            $("#workExperience").append(HTMLworkStart);
-
-            var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", job.employer);
-            var formattedWorkTitle = HTMLworkTitle.replace("%data%", job.title);
-            var formattedWorkEmployerTitle = formattedWorkEmployer + formattedWorkTitle;
-            var formattedWorkLocation = HTMLworkLocation.replace("%data%", job.location);
-            var formattedWorkDates = HTMLworkDates.replace("%data%", job.dates);
-            var formattedWorkDescription = HTMLworkDescription.replace("%data%", job.description);
-
-            $(".work-entry:last").append(formattedWorkEmployerTitle, formattedWorkLocation, formattedWorkDates, formattedWorkDescription);
+            // $("#workExperience").append(HTMLworkStart);
+            //
+            // var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+            // var formattedWorkTitle = HTMLworkTitle.replace("%data%", job.title);
+            // var formattedWorkEmployerTitle = formattedWorkEmployer + formattedWorkTitle;
+            // var formattedWorkLocation = HTMLworkLocation.replace("%data%", job.location);
+            // var formattedWorkDates = HTMLworkDates.replace("%data%", job.dates);
+            // var formattedWorkDescription = HTMLworkDescription.replace("%data%", job.description);
+            //
+            // $(".work-entry:last").append(formattedWorkEmployerTitle, formattedWorkLocation, formattedWorkDates, formattedWorkDescription);
         });
     }
 };
