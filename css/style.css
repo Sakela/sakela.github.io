@@ -27,7 +27,7 @@ h6 {
 
 .project-entry {
     padding: 0 5%;
-    /* display: none; */
+    display: none;
 }
 
 .current {
@@ -191,6 +191,15 @@ img {
 .project-image {
     max-height: 400px;
     width: auto;
+}
+
+.education-image {
+    width: 200px;
+    float: right;
+}
+
+.padding-none {
+    padding: 0;
 }
 
 .social {

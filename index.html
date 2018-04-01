@@ -7,43 +7,78 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet">
     <script src="js/jQuery.js"></script>
-    <script src="js/helper.js"></script>
+    <script src="js/map.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry&key=AIzaSyCWw2e-8twlVTlQDo9S_RczZO4hxnF8zS8"></script>
 </head>
 
 <body>
     <div class="container-fluid" id="main">
         <header class="row">
-           <div id="header-top" class="center-content">
-              <div class="col-xs-12 text-center head-and-role"><h1 id="name">Igor Sakelari</h1></div>
-              <span class="white-text col-xs-12 text-center head-and-role">Front-End Web Developer</span>
-              <hr class="col-xs-12">
-              <ul id="topContacts" class="flex-box">
-                 <li class="flex-item"><span class="blue-text">mobile</span><span class="white-text">+1(470)535-6421</span></li>
-                 <li class="flex-item"><span class="blue-text">email</span><span class="white-text">sakelari.igor@gmail.com</span></li>
-                 <li class="flex-item"><span class="blue-text">github</span><span class="white-text">https://github.com/Sakela</span></li>
-                 <li class="flex-item"><span class="blue-text">location</span><span class="white-text">Acworth, GA, USA</span></li>
-              </ul>
-           </div>
-           <div id="header-bottom" class="center-content">
-              <div class="col-xs-12"><img src="images/ava.jpg" class="biopic img-circle img-responsive center-block"></div>
-              <h3 id="skills-h3">Skills at a Glance:</h3>
-              <ul id="skills" class="flex-box">
-                 <li class="flex-item"><span class="white-text">JavaScript</span></li>
-                 <li class="flex-item"><span class="white-text">JQuery</span></li>
-                 <li class="flex-item"><span class="white-text">AngularJS</span></li>
-                 <li class="flex-item"><span class="white-text">KnockoutJS</span></li>
-                 <li class="flex-item"><span class="white-text">HTML5/CSS3</span></li>
-                 <li class="flex-item"><span class="white-text">Bootstrap</span></li>
-                 <li class="flex-item"><span class="white-text">Jasmine</span></li>
-                 <li class="flex-item"><span class="white-text">REST</span></li>
-                 <li class="flex-item"><span class="white-text">AJAX</span></li>
-              </ul>
-           </div>
+            <div id="header-top" class="center-content">
+                <div class="col-xs-12 text-center head-and-role">
+                    <h1 id="name">Igor Sakelari</h1>
+                </div>
+                <span class="white-text col-xs-12 text-center head-and-role">Front-End Web Developer</span>
+                <hr class="col-xs-12">
+                <ul id="topContacts" class="flex-box">
+                    <li class="flex-item">
+                        <span class="blue-text">mobile</span>
+                        <span class="white-text">+1(470)535-6421</span>
+                    </li>
+                    <li class="flex-item">
+                        <span class="blue-text">email</span>
+                        <span class="white-text">sakelari.igor@gmail.com</span>
+                    </li>
+                    <li class="flex-item">
+                        <span class="blue-text">github</span>
+                        <span class="white-text">https://github.com/Sakela</span>
+                    </li>
+                    <li class="flex-item">
+                        <span class="blue-text">location</span>
+                        <span class="white-text">Acworth, GA, USA</span>
+                    </li>
+                </ul>
+            </div>
+            <div id="header-bottom" class="center-content">
+                <div class="col-xs-12">
+                    <img src="images/ava.jpg" class="biopic img-circle img-responsive center-block">
+                </div>
+                <h3 id="skills-h3">Skills at a Glance:</h3>
+                <ul id="skills" class="flex-box">
+                    <li class="flex-item">
+                        <span class="white-text">JavaScript</span>
+                    </li>
+                    <li class="flex-item">
+                        <span class="white-text">JQuery</span>
+                    </li>
+                    <li class="flex-item">
+                        <span class="white-text">AngularJS</span>
+                    </li>
+                    <li class="flex-item">
+                        <span class="white-text">KnockoutJS</span>
+                    </li>
+                    <li class="flex-item">
+                        <span class="white-text">HTML5/CSS3</span>
+                    </li>
+                    <li class="flex-item">
+                        <span class="white-text">Bootstrap</span>
+                    </li>
+                    <li class="flex-item">
+                        <span class="white-text">Jasmine</span>
+                    </li>
+                    <li class="flex-item">
+                        <span class="white-text">REST</span>
+                    </li>
+                    <li class="flex-item">
+                        <span class="white-text">AJAX</span>
+                    </li>
+                </ul>
+            </div>
         </header>
 
         <!-- <div style="clear: both;"></div> -->
@@ -53,7 +88,7 @@
             <!-- <div class="project-entry col-xs-12 text-center">
                <a href="" target="_blank" id="title"></a>
                <div class="date-text"></div>
-               <p id="description"><br></p>
+               <p id="description"></p>
                <img class="img-responsive center-block project-image" src="">
              </div> -->
         </section>
@@ -63,19 +98,19 @@
         </div>
 
         <section class="row" id="workExperience">
-           <h2>Work Experience</h2>
-           <div class="work-entry">
-              <a href="#">KeHE Distributors - Inventory Control Specialist</a>
-              <div class="location-text">Douglasville, GA, United States</div>
-              <div class="date-text">December 2016 - Current</div>
-              <p><br>Inventory slotting, maintain data accuracy with Excel, investigate discrepancies</p>
-           </div>
-           <div class="work-entry">
-              <a href="#">Yandex Ukraine - Website Assessor</a>
-              <div class="location-text">Odessa Ukraine</div>
-              <div class="date-text">September 2013 - December 2016</div>
-              <p><br>Website relevance evaluation, spam detection, side-by-side search engine comparison</p>
-           </div>
+            <h2>Work Experience</h2>
+            <div class="work-entry">
+                <a href="#">KeHE Distributors - Inventory Control Specialist</a>
+                <div class="location-text">Douglasville, GA, United States</div>
+                <div class="date-text">December 2016 - Current</div>
+                <p>Inventory slotting, maintain data accuracy with Excel, investigate discrepancies</p>
+            </div>
+            <div class="work-entry">
+                <a href="#">Yandex Ukraine - Website Assessor</a>
+                <div class="location-text">Odessa Ukraine</div>
+                <div class="date-text">September 2013 - December 2016</div>
+                <p>Website relevance evaluation, spam detection, side-by-side search engine comparison</p>
+            </div>
         </section>
 
         <div class="row center-content">
@@ -83,28 +118,33 @@
         </div>
 
         <section class="row" id="education">
-           <h2>Education</h2>
-           <div class="education-entry">
-              <a href="http://www.noc.edu" target="_blank">Northern Oklahoma College</a>
-              <div class="location-text">Enid, OK, United States</div>
-              <div class="date-text">September 2008 - June 2009</div>
-           </div>
-           <div class="education-entry">
-              <a href="http://www.rcc.edu" target="_blank">Riverside Community College</a>
-              <div class="location-text">Moreno Valley, CA, United States</div>
-              <div class="date-text">September 2007 - June 2008</div>
-           </div>
-           <hr>
-           <div class="education-entry">
-              <a href="#">Front-End NanoDegree - Udacity</a>
-              <div class="date-text">January 2017- December 2017</div>
-              <a href="#">https://www.udacity.com</a>
-           </div>
-           <div class="education-entry">
-              <a href="#">Web Development Courses - CodeCademy</a>
-              <div class="date-text">2016</div>
-              <a href="#">https://www.codecademy.com</a>
-           </div>
+            <h2>Education</h2>
+            <div class="education-entry">
+                <a href="http://www.noc.edu" target="_blank">Northern Oklahoma College</a>
+                <div class="location-text">Enid, OK, United States</div>
+                <div class="date-text">September 2008 - June 2009</div>
+            </div>
+            <div class="education-entry">
+                <a href="http://www.rcc.edu" target="_blank">Riverside Community College</a>
+                <div class="location-text">Moreno Valley, CA, United States</div>
+                <div class="date-text">September 2007 - June 2008</div>
+            </div>
+            <hr>
+            <div class="education-entry">
+                <div class="col-xs-8 padding-none">
+                    <a href="#">Front-End NanoDegree - Udacity</a>
+                    <div class="date-text">January 2017- December 2017</div>
+                    <a href="#">https://www.udacity.com</a>
+                </div>
+                <div class="col-xs-4 padding-none">
+                    <img src="images/certif.svg" class="education-image padding-none" target="_blank">
+                </div>
+            </div>
+            <div class="education-entry">
+                <a href="#">Web Development Courses - CodeCademy</a>
+                <div class="date-text">2016</div>
+                <a href="#">https://www.codecademy.com</a>
+            </div>
         </section>
 
         <section class="row" id="mapDiv">
@@ -116,13 +156,19 @@
             <h2 class="inline-elements black-text">Let's Connect</h2>
             <ul class="inline-elements">
                 <li>
-                    <a href="https://www.linkedin.com"><img class="social" src="images/linkedin.svg"></a>
+                    <a href="https://www.linkedin.com">
+                        <img class="social" src="images/linkedin.svg">
+                    </a>
                 </li>
                 <li>
-                    <a href="https://www.facebook.com/igor.sakelari"><img class="social" src="images/facebook.svg"></a>
+                    <a href="https://www.facebook.com/igor.sakelari">
+                        <img class="social" src="images/facebook.svg">
+                    </a>
                 </li>
                 <li>
-                    <a href="https://github.com/Sakela"><img class="social" src="images/github.svg"></a>
+                    <a href="https://github.com/Sakela">
+                        <img class="social" src="images/github.svg">
+                    </a>
                 </li>
             </ul>
         </footer>
