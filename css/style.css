@@ -15,6 +15,10 @@ h6 {
     font-weight: 400;
 }
 
+body {
+    background-color: #251a2f;
+}
+
 .clear-fix {
     overflow: auto;
 }
@@ -145,7 +149,6 @@ a {
     background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
 #header-top {
     background: black;
 }
@@ -163,8 +166,23 @@ a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 10px;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.flex-end a {
+    text-decoration: none;
+    font-weight: 900;
+    margin-left: 4vw;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.line-thick {
+    background-color: #c7c2b8;
+    height: 3px;
 }
 
 .inline-elements {
