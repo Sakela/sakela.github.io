@@ -133,6 +133,50 @@ nav {
     margin-bottom: 0;
 }
 
+.social-links {
+    z-index: 1001;
+    position: fixed;
+    right: 0;
+    top: calc(50% - (500px / 2));
+    width: 55px;
+    height: 220px;
+}
+
+.social-links ul {
+    padding: 0;
+    margin: 0;
+}
+
+.social-links ul li a {
+    margin: 0;
+}
+
+.social-img {
+    height: 48px;
+    width: 48px;
+    padding: 5px;
+}
+
+.social-lk {
+    background-color: #3e3eaa;
+}
+
+.social-fb {
+    background-color: #252592;
+}
+
+.social-gh {
+    background-color: #46465c;
+}
+
+.facebook {
+    display: block;
+    width: 35px;
+    height: 35px;
+    background: url(images/facebook.svg) no-repeat 0 1px;
+    background-size: 100% auto; 
+}
+
 .flex-box {
     display: -webkit-flex;
     display: flex;
@@ -176,10 +220,6 @@ ul {
     width: 200px;
 }
 
-img {
-    padding: 10px;
-}
-
 .project-image {
     max-height: 400px;
     width: auto;
@@ -192,11 +232,6 @@ img {
 
 .padding-none {
     padding: 0;
-}
-
-.social {
-    height: 48px;
-    width: 48px;
 }
 
 span {
