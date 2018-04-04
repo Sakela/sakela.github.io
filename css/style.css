@@ -1,16 +1,5 @@
-body,
-div,
-ul,
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    padding: 0;
-    margin: 0;
+body {
+    color: #fff;
     font-family: 'Droid Serif', serif;
     font-weight: 400;
 }
@@ -42,42 +31,6 @@ body {
     padding: initial;
 }
 
-h1 {
-    font-size: 40px;
-    color: #aaa0f3;
-    line-height: 48px;
-    display: inline;
-}
-
-h2 {
-    font-weight: bold;
-    font-size: 24px;
-    color: #aaa0f3;
-    line-height: 29px;
-    padding: 10px;
-}
-
-h3 {
-    font-style: italic;
-    font-size: 20px;
-    color: #aaa0f3;
-    line-height: 22px;
-}
-
-h4 {
-    font-weight: bold;
-    font-size: 14px;
-    color: #4a4a4a;
-    line-height: 17px;
-}
-
-h2,
-h3,
-h4,
-h5 {
-    padding: 10px 5%;
-}
-
 .date-text {
     font-style: italic;
     font-size: 14px;
@@ -97,12 +50,12 @@ h5 {
 
 p {
     font-size: 14px;
-    color: #333;
+    color: #fff;
     line-height: 21px;
 }
 
 a {
-    color: #1199c3;
+    color: #fff;
     text-decoration: none !important;
     margin-top: 10px;
     display: block;
@@ -161,6 +114,11 @@ a {
     background: radial-gradient(white 1%, #4a4a4a 15%, black 60%); /* Standard syntax */
 }
 
+nav {
+    display: flex;
+    align-items: center;
+}
+
 .flex-box {
     display: -webkit-flex;
     display: flex;
@@ -173,6 +131,7 @@ a {
 }
 
 .flex-end a {
+    color: #fff;
     text-decoration: none;
     font-weight: 900;
     margin-left: 4vw;
@@ -181,7 +140,7 @@ a {
 }
 
 .line-thick {
-    background-color: #c7c2b8;
+    background-color: #fff;
     height: 3px;
 }
 
