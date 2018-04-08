@@ -234,20 +234,20 @@ var projects = {
 
         projects.projects.forEach(function(app) {
             $("#projects").append(HTMLprojectStart);
-            var formattedTitle = HTMLprojectTitle.replace("%data%", app.title);
-            $(".project-entry:last").append(formattedTitle);
-            var formattedDates = HTMLprojectDates.replace("%data%", app.dates);
-            $(".project-entry:last").append(formattedDates);
-            var formattedDescription = HTMLprojectDescription.replace("%data%", app.description);
-            $(".project-entry:last").append(formattedDescription);
+            // var formattedTitle = HTMLprojectTitle.replace("%data%", app.title);
+            // $(".project-entry:last").append(formattedTitle);
+            // var formattedDates = HTMLprojectDates.replace("%data%", app.dates);
+            // $(".project-entry:last").append(formattedDates);
+            // var formattedDescription = HTMLprojectDescription.replace("%data%", app.description);
+            // $(".project-entry:last").append(formattedDescription);
             var formattedImage = HTMLprojectImage.replace("%data%", app.images);
             $(".project-entry:last").append(formattedImage);
 
-            $(".project-entry a:last").each(function(i) {
-                var $this = $(this);
-                $this.attr("target", "_blank");
-                $this.attr("href", app.url);
-            });
+            // $(".project-entry a:last").each(function(i) {
+            //     var $this = $(this);
+            //     $this.attr("target", "_blank");
+            //     $this.attr("href", app.url);
+            // });
         });
     }
 };
@@ -306,6 +306,25 @@ $(document).ready(function() {
         // });
     });
 });
+
+let burger = $('.burger');
+let navLinks = $('.nav-links');
+
+burger.click(function(){
+    if (burger.hasClass('st-1')) {
+        burger.removeClass('st-2');
+        setTimeout(() => {
+            burger.removeClass('st-1');
+            navLinks.addClass('hidden');
+        }, 200);
+    } else {
+        burger.addClass('st-1');
+        setTimeout(() => {
+            burger.addClass('st-2');
+            navLinks.removeClass('hidden');
+        }, 200);
+    }
+})
 
 //Call display functions for each section
 
