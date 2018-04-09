@@ -234,20 +234,20 @@ var projects = {
 
         projects.projects.forEach(function(app) {
             $("#projects").append(HTMLprojectStart);
-            // var formattedTitle = HTMLprojectTitle.replace("%data%", app.title);
-            // $(".project-entry:last").append(formattedTitle);
-            // var formattedDates = HTMLprojectDates.replace("%data%", app.dates);
-            // $(".project-entry:last").append(formattedDates);
-            // var formattedDescription = HTMLprojectDescription.replace("%data%", app.description);
-            // $(".project-entry:last").append(formattedDescription);
+            var formattedTitle = HTMLprojectTitle.replace("%data%", app.title);
+            $(".project-entry:last").append(formattedTitle);
+            var formattedDates = HTMLprojectDates.replace("%data%", app.dates);
+            $(".project-entry:last").append(formattedDates);
+            var formattedDescription = HTMLprojectDescription.replace("%data%", app.description);
+            $(".project-entry:last").append(formattedDescription);
             var formattedImage = HTMLprojectImage.replace("%data%", app.images);
             $(".project-entry:last").append(formattedImage);
 
-            // $(".project-entry a:last").each(function(i) {
-            //     var $this = $(this);
-            //     $this.attr("target", "_blank");
-            //     $this.attr("href", app.url);
-            // });
+            $(".project-entry a:last").each(function(i) {
+                var $this = $(this);
+                $this.attr("target", "_blank");
+                $this.attr("href", app.url);
+            });
         });
     }
 };

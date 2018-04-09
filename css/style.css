@@ -102,6 +102,49 @@ a {
     background-color: #4a4a4a;
 }
 
+.grid-container {
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: auto auto auto;
+    border: 1px solid red;
+}
+
+.grid-item {
+    /* animation: item-slide 5s cubic-bezier(.43,.77,.15,1.5); */
+    background-color: #f5a623;  
+}
+
+@keyframes item-slide {
+    from {
+        width: 90%;
+        height: 90%;
+        background: red;
+        -webkit-transition: width 2s, height 2s, 
+        -webkit-transform 2s; /* Safari */
+        transition: width 2s, height 2s, transform 2s;
+    }
+
+    to {
+        width: auto;
+        height: auto;
+        -webkit-transform: rotate(180deg); /* Safari */
+        transform: rotate(180deg);
+    }
+}
+
+#typedtext {
+    font-family: 'Waiting for the Sunrise', cursive; 
+    font-size:30px; 
+    margin: 10px 50px; 
+    letter-spacing: 6px; 
+    font-weight: bold;
+}
+
+.grid-image {
+    max-width: 100%;
+}
+
 #header-top {
     background: black;
 }
