@@ -3,7 +3,7 @@ body {
     color: #fff;
     font-family: 'Droid Serif', serif;
     font-weight: 400;
-    background-color: #200c33;
+    background-color: #1c0c2a;
 }
 
 .clear-fix {
@@ -77,8 +77,7 @@ ul {
 }
 
 .grid-item {
-    /* animation: item-slide 5s cubic-bezier(.43,.77,.15,1.5); */
-    background-color: #f5a623;  
+    /* animation: item-slide 5s cubic-bezier(.43,.77,.15,1.5); */  
 }
 
 .grid-image {
@@ -96,6 +95,10 @@ ul {
 
 .flex-box-column {
     flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
 }
 
 .flex-end {
@@ -174,11 +177,12 @@ ul {
 }
 
 #typedtext {
-    font-family: 'Waiting for the Sunrise', cursive; 
-    font-size:30px; 
-    margin: 10px 50px; 
+    /* font-family: 'Waiting for the Sunrise', cursive;  */
+    font-size:22px; 
+    margin: 30px 50px; 
     letter-spacing: 6px; 
-    font-weight: bold;
+    /* font-weight: bold; */
+    max-width: 400px;
 }
 
 /* NAVIGATION */
@@ -279,6 +283,38 @@ nav {
 
 .burger.st-2 i:nth-child(3) {
     transform: translate3d(0,-13px,0) rotate(135deg) scale(1.5);
+}
+
+/* SKILLS TAG */
+.skill-tag {
+    transition: transform .45s cubic-bezier(.43,.77,.15,1.5);
+    max-width: 100px;
+    /* background-color: #402955; */
+    margin: 3px;
+    padding: 1px;
+    text-align: center;
+}
+
+.skill-tag:nth-child(even) {
+    transform: rotate(3deg);
+    border-top: 2px solid #fff;
+}
+
+.skill-tag:nth-child(even):hover {
+    transform: rotate(-3deg);
+}
+
+.skill-tag:nth-child(odd) {
+    transform: rotate(-3deg);
+    border-bottom: 2px solid #fff;
+}
+
+.skill-tag:nth-child(odd):hover {
+    transform: rotate(3deg);
+}
+
+.skill-tag-image {
+    max-width: 40px;
 }
 
 /* SOCIAL LINKS */
