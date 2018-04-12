@@ -10,14 +10,16 @@ body {
     overflow: auto;
 }
 
-.initial-padding {
-    padding: initial;
+.work-entry {
+    display: none;
 }
 
-p {
-    font-size: 14px;
-    color: #fff;
-    line-height: 21px;
+.education-entry {
+    display: none;
+}
+
+.initial-padding {
+    padding: initial;
 }
 
 a {
@@ -26,6 +28,11 @@ a {
     margin-top: 10px;
     display: block;
     font-weight: 700;
+}
+
+.padding-sides {
+    padding-left: 3vw;
+    padding-right: 3vw;
 }
 
 .padding-none {
@@ -63,8 +70,55 @@ ul {
 }
 
 .education-image {
-    width: 200px;
+    /* width: 200px; */
+    width: 100%;
     float: right;
+    height: auto;
+    background-color: #FFF;
+    margin: 10px;
+}
+
+.expand-hide {
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    border: 2px solid #FFF;
+    border-radius: 100%;
+}
+
+.expand-hide-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.expand-hide i {
+    transition: transform .45s cubic-bezier(.43,.77,.15,1.5),background .3s ease;
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.expand-hide i:nth-child(n) {
+    transition: transform 1.45s cubic-bezier(.43,.77,.15,1.5),margin-top .3s ease;
+    transition-property: transform, margin-top;
+    transition-duration: 1.45s, 0.3s;
+    transition-timing-function: cubic-bezier(0.43, 0.77, 0.15, 1.5), ease;
+    transition-delay: initial, initial;
+}
+
+.expand-hide i:nth-child(even) {
+    transform: rotate(90deg);
+}
+
+.expand-hide.rotate i:nth-child(2) {
+    transform: rotate(360deg);
+    margin-top: -1px;
+}
+
+.expand-hide i:nth-child(odd) {
+    margin-top: 20px;
 }
 
 /* GRID CSS */
@@ -178,11 +232,14 @@ ul {
 
 #typedtext {
     /* font-family: 'Waiting for the Sunrise', cursive;  */
-    font-size:22px; 
+    /* font-size:22px; 
     margin: 30px 50px; 
     letter-spacing: 6px; 
-    /* font-weight: bold; */
-    max-width: 400px;
+    max-width: 400px; */
+    font-size: 15px;
+    margin: 20px 40px;
+    letter-spacing: 6px;
+    max-width : 400px;
 }
 
 /* NAVIGATION */
@@ -289,28 +346,17 @@ nav {
 .skill-tag {
     transition: transform .45s cubic-bezier(.43,.77,.15,1.5);
     max-width: 100px;
-    /* background-color: #402955; */
+    background-color: #fff;
     margin: 3px;
     padding: 1px;
     text-align: center;
 }
 
-.skill-tag:nth-child(even) {
-    transform: rotate(3deg);
-    border-top: 2px solid #fff;
-}
-
-.skill-tag:nth-child(even):hover {
-    transform: rotate(-3deg);
-}
-
-.skill-tag:nth-child(odd) {
-    transform: rotate(-3deg);
-    border-bottom: 2px solid #fff;
-}
-
-.skill-tag:nth-child(odd):hover {
-    transform: rotate(3deg);
+.skill-tag p {
+    font-size: 11px;
+    color: #1c0c2a;
+    margin: 0;
+    /* line-height: 21px; */
 }
 
 .skill-tag-image {
@@ -393,19 +439,12 @@ nav {
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
 
 @media only screen and (max-width: 1024px) {
-    #lets-connect {
-        margin-top: 5%;
-    };
-
     .location-text {
       display: block;
     }
 }
 
 @media only screen and (max-width:900px) {
-    .biopic {
-        width: 175px;
-    };
 
     .location-text {
       display: block;
@@ -413,22 +452,11 @@ nav {
 }
 
 @media only screen and (max-width: 750px) {
-    #lets-connect {
-        margin-top: 10%;
-    }
-
-    .biopic {
-        width: 150px;
-    }
 
     .project-image {
         /* max-height: 400px; */
         width: auto;
     }
-
-    .welcome-message {
-        display: block;
-    };
 
     #map {
         display: block;
@@ -448,8 +476,40 @@ nav {
 }
 
 @media only screen and (min-width: 750px) {
-    #skills-h3,
-    .biopic {
-        display: block;
-    };
+    #typedtext {
+        /* font-family: 'Waiting for the Sunrise', cursive;  */
+        font-size:22px; 
+        margin: 30px 50px; 
+        letter-spacing: 6px; 
+        /* font-weight: bold; */
+        max-width: 400px;
+    }
+    
+    .skill-tag {
+        background-color: #1c0c2a;
+    }
+    
+    .skill-tag p {
+        font-size: 14px;
+        color: #fff;
+        line-height: 21px;
+    }
+
+    .skill-tag:nth-child(even) {
+        transform: rotate(3deg);
+        border-top: 2px solid #fff;
+    }
+    
+    .skill-tag:nth-child(even):hover {
+        transform: rotate(-3deg);
+    }
+    
+    .skill-tag:nth-child(odd) {
+        transform: rotate(-3deg);
+        border-bottom: 2px solid #fff;
+    }
+    
+    .skill-tag:nth-child(odd):hover {
+        transform: rotate(3deg);
+    }
 }

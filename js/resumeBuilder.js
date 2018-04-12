@@ -108,9 +108,6 @@ var education = {
             });
         });
 
-        // $(".education-entry").append(HTMLonlineClasses);
-        $(".education-entry:last").after("<hr>");
-
         education.onlineCourses.forEach(function(course) {
             // $("#education").append(HTMLschoolStart);
             // var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", course.title);
@@ -323,6 +320,18 @@ burger.click(function(){
             burger.addClass('st-2');
             navLinks.removeClass('hidden');
         }, 200);
+    }
+})
+
+let expand = $('.expand-hide');
+
+expand.click(function() {
+    if (expand.hasClass('rotate')) {
+        expand.removeClass('rotate');
+        $('.work-entry').toggle();
+    } else {
+        expand.addClass('rotate');
+        $('.work-entry').toggle();
     }
 })
 
