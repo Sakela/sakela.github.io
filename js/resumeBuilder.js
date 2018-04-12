@@ -326,12 +326,13 @@ burger.click(function(){
 let expand = $('.expand-hide');
 
 expand.click(function() {
-    if (expand.hasClass('rotate')) {
-        expand.removeClass('rotate');
-        $('.work-entry').toggle();
+    let parent = $(this).parent();
+    if ($(this).hasClass('rotate')) {
+        $(this).removeClass('rotate');
+        parent.nextAll().css( "display", "none" );
     } else {
-        expand.addClass('rotate');
-        $('.work-entry').toggle();
+        $(this).addClass('rotate');
+        parent.nextAll().css( "display", "block" );
     }
 })
 
