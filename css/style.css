@@ -283,7 +283,7 @@ nav {
 .nav-links a {
     display: flex;
     justify-content: center;
-    width: 60%;
+    width: auto;
     padding: 20px;
     font-size: 25px;
 }
