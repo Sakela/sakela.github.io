@@ -4,7 +4,7 @@ var aText = new Array(
     "I build responsive web apps with CSS3, single page applications with AngularJS.",
     "Check out my porfolio and let's connect."
 );
-var iSpeed = 100; // time delay of print out
+var iSpeed = 50; // time delay of print out
 var iIndex = 0; // start printing array at this posision
 var iArrLength = aText[0].length; // the length of the text array
 var iScrollAt = 20; // start scrolling up at this many lines
@@ -33,6 +33,5 @@ function typewriter() {
         setTimeout("typewriter()", iSpeed);
     }
 }
-
 
 typewriter();
