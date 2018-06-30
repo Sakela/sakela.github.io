@@ -11,7 +11,7 @@ var bio = {
     // "welcomeMessage": "Seeking to start a career as Front-End Developer",
     "skills": ["JavaScript", "JQuery", "AngularJS", "KnockoutJS", "HTML5/CSS3", "Bootstrap", "Jasmine", "REST", "AJAX"],
     "biopic": "images/ava.jpg",
-    "display": function() {
+    "display": function () {
         // var formattedName = $('#name').text(bio.name);
         // var formattedRole = $('#name').next().text(bio.role);
         // var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
@@ -84,31 +84,31 @@ var education = {
             "url": "https://www.codecademy.com"
         }
     ],
-    "display": function() {
+    "display": function () {
 
 
-        education.schools.forEach(function(school) {
-          // $("#education").append(HTMLschoolStart);
-          //   var formattedSchoolName = HTMLschoolName.replace("%data%", school.name);
-          //   var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", school.location);
-          //   var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
-          //   var formattedSchoolDates = HTMLschoolDates.replace("%data%", school.dates);
-          //   var formattedSchoolNameDegree = formattedSchoolName + formattedSchoolDegree;
-          //
-          //   $(".education-entry:last").append(formattedSchoolName, formattedSchoolLocation, formattedSchoolDates);
+        education.schools.forEach(function (school) {
+            // $("#education").append(HTMLschoolStart);
+            //   var formattedSchoolName = HTMLschoolName.replace("%data%", school.name);
+            //   var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", school.location);
+            //   var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
+            //   var formattedSchoolDates = HTMLschoolDates.replace("%data%", school.dates);
+            //   var formattedSchoolNameDegree = formattedSchoolName + formattedSchoolDegree;
+            //
+            //   $(".education-entry:last").append(formattedSchoolName, formattedSchoolLocation, formattedSchoolDates);
 
             // for (var i = 0; i < school.majors.length; i++) {
             //     var formattedSchoolMajors = HTMLschoolMajor.replace("%data%", school.majors[i]);
             //     $(".education-entry:last").append(formattedSchoolMajors);
             // }
 
-            $(".education-entry a:last").each(function(i) {
+            $(".education-entry a:last").each(function (i) {
                 var $this = $(this);
                 $this.attr("href", school.url);
             });
         });
 
-        education.onlineCourses.forEach(function(course) {
+        education.onlineCourses.forEach(function (course) {
             // $("#education").append(HTMLschoolStart);
             // var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", course.title);
             // var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", course.school);
@@ -139,8 +139,8 @@ var work = {
             "description": "Website relevance evaluation, spam detection, side-by-side search engine comparison"
         }
     ],
-    "display": function() {
-        work.jobs.forEach(function(job) {
+    "display": function () {
+        work.jobs.forEach(function (job) {
             // $("#workExperience").append(HTMLworkStart);
             //
             // var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", job.employer);
@@ -158,108 +158,148 @@ var work = {
 /*****Projects Section*****/
 
 var projects = {
-    "projects": [
+    portfolios: [
         {
-            "title": "Art Studio with Angular",
-            "dates": "February 2018 - March 2018",
-            "description": "SPA application featuring AngularJS modular architecture",
-            "images": "images/art-angular.jpg",
-            "url" : "https://sakela.github.io/AnnaStudio"
+            title : "Anna Davis with Sydney Theme",
+            dates : "May 2018 - June 2018",
+            description : "Customize CSS and content with a Sydney Theme on WordPress",
+            images : "images/annadavis.png",
+            skills : 'WordPress',
+            url : "https://annadavispaintings.com"
         },
         {
-            "title": "Feedreader Testing",
-            "dates": "December 2017",
-            "description": "Writing unit tests with Jasmine",
-            "images": "images/testing.jpg",
-            "url" : "https://sakela.github.io/feedreader-testing"
+            title : "Art Studio with Angular",
+            dates : "February 2018 - March 2018",
+            description : "Single Page Application built from scratch with AngularJS, modular architeture and routing",
+            images : "images/art-angular.jpg",
+            skills : 'AngularJS',
+            url : "https://sakela.github.io/AnnaStudio"
         },
         {
-            "title": "Neighborhood Map",
-            "dates": "October 2017 - December 2017",
-            "description": "Single page app with KnockoutJS MVVM pattern, utilizing use of 3rd party API libraries",
-            "images": "images/neighborhood.jpg",
-            "url" : "https://sakela.github.io/neighborhood-map"
+            title : "Neighborhood Map",
+            dates : "October 2017 - December 2017",
+            description : "Single page app with KnockoutJS MVVM pattern, utilizing use of 3rd party API libraries",
+            images : "images/neighborhood-showcase-xs.png",
+            skills : 'KnockoutJS',
+            url : "https://sakela.github.io/neighborhood-map"
         },
         {
-            "title": "Optimization Portfolio",
-            "dates": "August 2017 - September 2017",
-            "description": "Use optimization techniques to make pizza page run without jaddering",
-            "images": "images/optimization.jpg",
-            "url" : "https://sakela.github.io/optimization-portfolio/views/pizza.html"
+            title : "Feedreader Testing",
+            dates : "December 2017",
+            description : "Writing unit tests with Jasmine",
+            images : "images/unit-test-showcase-md.png",
+            skills : 'Jasmine',
+            url : "https://sakela.github.io/feedreader-testing"
         },
         {
-            "title": "Frogger Arcade Game Clone",
-            "dates": "June 2017 - July 2017",
-            "description": "A game created on HTML5 Canvas with JavaScript OOP paradigm",
-            "images": "images/arcade.jpg",
-            "url" : "https://sakela.github.io/frogger-arcade"
-        },
-        {
-            "title": "Udacity Portfolio",
-            "dates": "March 2017",
-            "description": "Udacity course for responsive design and images",
-            "images": "images/portfolio.jpg",
-            "url" : "https://sakela.github.io/my-portfolio"
-        },
-        {
-            "title": "Angular Phonecat",
-            "dates": "August 2016",
-            "description": "Catalogue with Angular framework",
-            "images": "images/phonecat.jpg"
-        },
-        {
-            "title": "App Market with Angular",
-            "dates": "July 2016",
-            "description": "Practicing AngularJS with Codecademy",
-            "images": "images/angularApp.jpg",
-            "url" : "https://sakela.github.io/angular-direct"
-        },
-        {
-            "title": "Jumbotron Flipboard",
-            "dates": "June 2016",
-            "description": "Creating a simple web page using Bootstrap library",
-            "images": "images/flipboard.jpg",
-            "url" : "https://sakela.github.io/MyFlipboard"
+            title : "Frogger Arcade Game Clone",
+            dates : "June 2017 - July 2017",
+            description : "A game created on HTML5 Canvas with JavaScript OOP paradigm",
+            images : "images/arcade-showcase-xs.png",
+            skills : 'JavaScript',
+            url : "https://sakela.github.io/frogger-arcade"
         }
+        // {
+        //     "title": "Optimization Portfolio",
+        //     "dates": "August 2017 - September 2017",
+        //     "description": "Use optimization techniques to make pizza page run without jaddering",
+        //     "images": "images/optimization.jpg",
+        //     "url": "https://sakela.github.io/optimization-portfolio/views/pizza.html"
+        // }
+        // {
+        //     "title": "Udacity Portfolio",
+        //     "dates": "March 2017",
+        //     "description": "Udacity course for responsive design and images",
+        //     "images": "images/portfolio.jpg",
+        //     "url" : "https://sakela.github.io/my-portfolio"
+        // },
+        // {
+        //     "title": "Angular Phonecat",
+        //     "dates": "August 2016",
+        //     "description": "Catalogue with Angular framework",
+        //     "images": "images/phonecat.jpg"
+        // },
+        // {
+        //     "title": "App Market with Angular",
+        //     "dates": "July 2016",
+        //     "description": "Practicing AngularJS with Codecademy",
+        //     "images": "images/angularApp.jpg",
+        //     "url" : "https://sakela.github.io/angular-direct"
+        // },
+        // {
+        //     "title": "Jumbotron Flipboard",
+        //     "dates": "June 2016",
+        //     "description": "Creating a simple web page using Bootstrap library",
+        //     "images": "images/flipboard.jpg",
+        //     "url" : "https://sakela.github.io/MyFlipboard"
+        // }
     ],
-    "display": function() {
-        var HTMLprojectStart = '<div class="project-entry col-xs-12 text-center"></div>';
-        var HTMLprojectTitle = '<a href="#" id="title">%data%</a>';
-        var HTMLprojectDates = '<div class="date-text">%data%</div>';
-        var HTMLprojectDescription = '<p id="description"><br>%data%</p>';
-        var HTMLprojectImage = '<img class="img-responsive center-block project-image" src="%data%">';
+    "display": function () {
+        // var HTMLprojectStart = '<div class="project-entry col-xs-12 text-center"></div>';
+        // var HTMLprojectTitle = '<a href="#" id="title">%data%</a>';
+        // var HTMLprojectDates = '<div class="date-text">%data%</div>';
+        // var HTMLprojectDescription = '<p id="description"><br>%data%</p>';
+        // var HTMLprojectImage = '<img class="img-responsive center-block project-image" src="%data%">';
 
-        projects.projects.forEach(function(app) {
-            $("#projects").append(HTMLprojectStart);
-            var formattedTitle = HTMLprojectTitle.replace("%data%", app.title);
-            $(".project-entry:last").append(formattedTitle);
-            var formattedDates = HTMLprojectDates.replace("%data%", app.dates);
-            $(".project-entry:last").append(formattedDates);
-            var formattedDescription = HTMLprojectDescription.replace("%data%", app.description);
-            $(".project-entry:last").append(formattedDescription);
-            var formattedImage = HTMLprojectImage.replace("%data%", app.images);
-            $(".project-entry:last").append(formattedImage);
+        // var templ = '<section class="flex-box portfolio-item"><figure class="portfolio-item-img-wrap"><img class="portfolio-item-img"></figure><div class="portfolio-item-info"><h3 class="portfolio-item-info-title"></h3><ul class="portfolio-item-info-bullets"></ul></div><div class="portfolio-item-cats"><p class="portfolio-item-cats-item"></p></div></section>'
 
-            $(".project-entry a:last").each(function(i) {
-                var $this = $(this);
-                $this.attr("target", "_blank");
-                $this.attr("href", app.url);
-            });
+        for (let i = 0; i < projects.portfolios.length; i++) {
+            let app = projects.portfolios[i];
+
+            let template = `
+            <section class="portfolio-item">
+                <figure class="portfolio-item-img-wrap">
+                    <img src="${app.images}" class="portfolio-item-img">
+                </figure>
+                <main class="portfolio-item-info">
+                    <h3 class="portfolio-item-info-title">${app.title}</h3>
+                    <p class="portfolio-item-info-description">${app.description}</p>
+                </main>
+                <ul class="portfolio-item-cats">
+                    <li class="portfolio-item-cats-skill">${app.skills}</li>
+                </ul>
+            </section>
+            `;
+
+            $(".portfolio").append(template);
+
+        }
+
+        projects.portfolios.forEach(function (app) {
+            // $(".portfolio").append(templ);
+
+            // $(".portfolio-item-info-title").text(app.title);
+
+            // $("#projects").append(HTMLprojectStart);
+            // var formattedTitle = HTMLprojectTitle.replace("%data%", app.title);
+            // $(".project-entry:last").append(formattedTitle);
+            // var formattedDates = HTMLprojectDates.replace("%data%", app.dates);
+            // $(".project-entry:last").append(formattedDates);
+            // var formattedDescription = HTMLprojectDescription.replace("%data%", app.description);
+            // $(".project-entry:last").append(formattedDescription);
+            // var formattedImage = HTMLprojectImage.replace("%data%", app.images);
+            // $(".project-entry:last").append(formattedImage);
+
+            // $(".project-entry a:last").each(function(i) {
+            //     var $this = $(this);
+            //     $this.attr("target", "_blank");
+            //     $this.attr("href", app.url);
+            // });
         });
     }
 };
 
 //Iterate through projects to display each at a time with Time Interval (Carousel)
 
-$(document).ready(function() {
+$(document).ready(function () {
     var firstProject = $(".project-entry").first();
     firstProject.addClass("current");
 
-    $("#projects").each(function() {
-        (function(set) {
-            setInterval(function() {
+    $("#projects").each(function () {
+        (function (set) {
+            setInterval(function () {
                 var currentProj = set.find('.current');
-                currentProj.fadeOut(600, function() {
+                currentProj.fadeOut(600, function () {
                     currentProj.removeClass('current');
                     var nextProj = currentProj.next().length ? currentProj.next() : set.children().eq(1);
                     nextProj.fadeIn(600).addClass('current');
@@ -282,7 +322,7 @@ function logClicks(x, y) {
     console.log('x location: ' + x + '; y location: ' + y);
 }
 
-$(document).click(function(loc) {
+$(document).click(function (loc) {
     var x = loc.pageX;
     var y = loc.pageY;
     logClicks(x, y);
@@ -293,9 +333,9 @@ var internationalizeButton = '<button>Internationalize</button>';
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */
-$(document).ready(function() {
-    $('button').click(function() {
-        var iName = inName(bio.name) || function() {};
+$(document).ready(function () {
+    $('button').click(function () {
+        var iName = inName(bio.name) || function () { };
         $('#name').html(iName);
 
         // setTimeout(function() {
@@ -307,7 +347,7 @@ $(document).ready(function() {
 let burger = $('.burger');
 let navLinks = $('.nav-links');
 
-burger.click(function(){
+burger.click(function () {
     if (burger.hasClass('st-1')) {
         burger.removeClass('st-2');
         setTimeout(() => {
@@ -325,20 +365,20 @@ burger.click(function(){
 
 let expand = $('.expand-hide');
 
-expand.click(function() {
+expand.click(function () {
     let parent = $(this).parent();
     if ($(this).hasClass('rotate')) {
         $(this).removeClass('rotate');
-        parent.nextAll().css( "display", "none" );
+        parent.nextAll().css("display", "none");
     } else {
         $(this).addClass('rotate');
-        parent.nextAll().css( "display", "block" );
+        parent.nextAll().css("display", "block");
     }
 })
 
 //Call display functions for each section
 
-bio.display();
-education.display();
-work.display();
-projects.display();
+// bio.display();
+// education.display();
+// work.display();
+// projects.display();
