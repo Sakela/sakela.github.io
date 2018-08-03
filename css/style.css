@@ -329,6 +329,10 @@ nav {
     align-items: center;
 }
 
+nav a:hover {
+    color: #9079a3;
+}
+
 .nav-name {
     font-size: 22px;
     text-transform: uppercase;
