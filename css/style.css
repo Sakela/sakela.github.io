@@ -12,10 +12,28 @@ body {
 
 .work-entry {
     display: none;
+    margin: 2em 0;
+}
+
+.work-entry a {
+    font-size: 1.2em;
+}
+
+.work-entry a:hover {
+    color: #9079a3;
 }
 
 .education-entry {
     display: none;
+    margin: 2em 0;
+}
+
+.education-entry a {
+    font-size: 1.2em;
+}
+
+.education-entry a:hover {
+    color: #9079a3;
 }
 
 .initial-padding {
@@ -41,6 +59,15 @@ a {
 
 span {
     padding: 5px;
+}
+
+span a {
+    display: inline;
+    font-style: italic;
+}
+
+span a:hover {
+    color: #9079a3;
 }
 
 .hidden {
@@ -136,12 +163,12 @@ ul {
 .portfolio-item-info-title {
     font-size: 22px;
     font-style: italic;
-    color: #caa8e7;
+    color: #9079a3;
     text-align: center;
 }
 
 .portfolio-item-info-title a:hover {
-    color: #caa8e7;
+    color: #9079a3;
 }
 
 .portfolio-item-img-wrap {
@@ -240,7 +267,7 @@ ul {
 .date-text {
     font-style: italic;
     font-size: 14px;
-    color: #999;
+    color: #9079a3;
     line-height: 16px;
     /* float: left; */
 }
@@ -249,7 +276,7 @@ ul {
     display: block;
     font-style: italic;
     font-size: 14px;
-    color: #999;
+    color: #9079a3;
     line-height: 16px;
     float: right;
 }
@@ -312,12 +339,21 @@ nav {
     animation: name-rotation 2s ease-in-out 1.2s;
 }
 
+a.nav-name {
+    margin: 0;
+}
+
 .nav-role {
     font-size: 15px;
     letter-spacing: 0.4px;
     margin-bottom: 0;
     -webkit-animation: name-rotation 2s ease-in-out; /* Safari 4.0 - 8.0 */
     animation: name-rotation 2s ease-in-out;
+}
+
+a.nav-role {
+    margin: 0;
+    font-weight: 100;
 }
 
 .nav-links {
@@ -344,8 +380,8 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #FFF; 
-    border: 1px solid #fff;
+    color: #9079a3; 
+    border: 1px solid #9079a3;
     padding: 19px;
 }
 
@@ -465,6 +501,14 @@ nav {
     background-color: #46465c;
 }
 
+.social-up {
+    background-color: #50da07;
+}
+
+.social-fr {
+    background-color: #1483ce;
+}
+
 #lets-connect {
     text-align: center;
 }
@@ -473,13 +517,14 @@ nav {
 #map {
     display: block;
     height: 100%;
-    margin: 0 5%;
+    margin: 0 5% 5% 5%;
 }
 
 #mapDiv {
     height: 400px;
     width: 100%;
-    padding-bottom: 5%;
+    padding-bottom: 15em;
+    text-align: center;
 }
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
@@ -504,24 +549,18 @@ nav {
         width: auto;
     }
 
-    #map {
-        display: block;
-        height: 100%;
-        margin: 0 5%;
-    }
-
-    #mapDiv {
-        height: 250px;
-        width: 100%;
-        padding-bottom: 10%;
-    }
-
     .location-text {
       display: none;
     }
 }
 
 @media only screen and (min-width: 750px) {
+    #mapDiv {
+        height: 250px;
+        width: 100%;
+        padding: 0% 20%;
+    }
+
     #typedtext {
         font-size:22px; 
         margin: 30px 50px; 
