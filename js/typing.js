@@ -35,3 +35,9 @@ function typewriter() {
 }
 
 typewriter();
+
+var links = $('.nav-links a');
+links.each(function(id, link) {
+    
+    console.log(link);
+});
